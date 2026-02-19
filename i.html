@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fbc2eb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<title>Wedding Invitation</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+
+/* ================= BODY ================= */
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+  text-align:center;
+  background:linear-gradient(-45deg,#6764d0,#4751df,#2e0ea2,#2d21b4);
+  background-size:400% 400%;
+  animation:bgMove 12s ease infinite;
+  overflow-x:hidden;
+  transition:.5s;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* LIGHT MODE */
+body.light{
+  background:linear-gradient(-45deg,#fff1eb,#ace0f9,#fbc2eb,#a6c1ee);
+  color:#333;
+}
+
+/* ================= SECTION ================= */
+.section{
+  padding:40px 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: transparent;
+  background-size: 400% 400%;
+  margin : 0;
+  
+}
+.section h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+.section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFD700, transparent);
+}
+.timeline {
+  background: linear-gradient(135deg, #00ffcc,#00ffcc, #0066ff, #9933ff);
+  background-size: 400% 400%;
+  animation: aurora 12s ease infinite;
+  color: #fff;
+}
+@keyframes aurora {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+.glass{
+  background: linear-gradient(-45deg, #000, #1a0033, #001f4d, #33001a);
+  backdrop-filter:blur(8px);
+  border-radius:30px ;
+  padding:24px;
+  max-width:720px;
+  width:100%;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+  transition:.5s;
+}
+
+body.light .glass{
+  background: linear-gradient(135deg, #fdfdfd, #fdd3f2f0);
+  color:#333;
+}
+
+/* ================= PHOTO ================= */
+.photo-frame{
+  width:240px;
+  height:240px;
+  margin:auto;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow:0 0 40px rgba(255,215,0,.9);
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
+
+.photo-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  
+}
+
+
+/* ================= TEXT ================= */
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:3.5em;
+  margin:20px 0 10px;
+  color:#ffd700;
+}
+
+body.light h1,
+body.light h2{color:#c2185b}
+
+h2{color:#ffd700}
+
+.date{
+  font-size:1.3em;
+  opacity:.9;
+  font-weight: bold;
+  color: #61a3f9;
+}
+.light .date { color: #aa2679; /* abu gelap */ 
+  text-shadow: none;
+}
+
+
+/* ================= BUTTON ================= */
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  background:linear-gradient(135deg,#ffd700,#fff2a8);
+  color:#000;
+  padding:14px 45px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 0 25px rgba(255,215,0,.9);
+  transition:.4s;
+  cursor:pointer;
+}
+
+.btn:hover{transform:scale(1.1)}
+
+body.light .btn{
+  background:linear-gradient(135deg,#ff8fa3,#ffd6e0);
+}
+ 
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+.title { 
+  font-family: 'Great Vibes', cursive; 
+  font-size: 2.4em;
+  background: linear-gradient(270deg, #f6cae0, #9dab08, #40e0d0,#d72111, #4147fc);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: aurora 2s ease infinite;
+}
+.photo-frame { margin-top: 40px; /* jarak ke atas dari tulisan */ }
+
+.names {
+  font-family:  'Playfair Display',serif;
+  font-size: 2em;
+  color: #ffffff;
+  text-shadow: 0 0 20px #fceded, 0 0 40px #f4f6f0;
+  margin-top: 15px;
+}
+/* ================= rekening ================= */
+.rekening-number {
+  font-size: 1.6em;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 0 10px #ff69b4, 0 0 20px #a64ca6;
+}
+
+.rekening-number::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+
+/* ================= COUNTDOWN FINAL ================= */
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+.neon{
+  background:linear-gradient(135deg,#2a2d35,#08084b);
+  padding:14px 16px;
+  border-radius:8px;
+  text-align:center;
+  color:rgb(241, 250, 250);
+  font-family:'Poppins',sans-serif;
+  font-weight:600;
+  min-width:90px;
+  box-shadow:0 0 10px rgb(75, 118, 118), 0 0 22px rgb(7, 241, 241);
+  transition:transform .3s ease;
+}
+
+.neon span{
+  display:block;
+  font-size:1.5em;        /* ANGKA FINAL */
+  line-height:1.1;
+  text-shadow:0 0 6px #0ff, 0 0 12px #0ff;
+}
+
+.neon small{
+  font-size:0.75em;       /* TEKS FINAL */
+  letter-spacing:1px;
+  opacity:0.85;
+}
+
+@keyframes breathingLight {
+  0%, 100% {
+    box-shadow: 0 0 22px rgba(255,217,138,.3);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(255,217,138,.6);
+  }
+}
+
+.quote-card {
+  border: 4px solid #ffe96d;
+  border-radius: 25px;
+  padding: 25px;
+  margin-top: 20px;
+  background: transparent;
+  text-align: center;
+  animation: breathingLight 3s infinite; /* aktifkan animasi */
+}
+
+.quote-card p {
+  font-size: 0.8em;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  line-height: 1.6;
+}
+.light .quote-card p {
+  font-size: 0.8em;
+  font-family: 'Playfair Display', serif;
+  color: #520b34;
+  text-shadow: 0 0 10px rgb(251, 253, 254);
+  line-height: 1.6;
+}
+
+
+/* ================= GALLERY ================= */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: calc(37% - 10px);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border: 3px solid #FFD700;
+  box-shadow: 0 0 20px rgba(255,215,0,0.6);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid #FFD700;
+  border-radius: 12px;
+  box-shadow: 0 0 30px #FFD700, 0 0 60px #fff2a8;
+}
+
+
+
+/* ================= FORM ================= */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input,button{
+  padding:14px;
+  border-radius:30px;
+  border:none;
+  font-size:1em;
+}
+
+button{
+  background:linear-gradient(135deg,#ffd700,#fff2a8);
+  font-weight:bold;
+}
+
+/* ================= FLOWER ================= */
+.flower{
+  position:fixed;
+  top:-50px;
+  animation:fall linear infinite;
+  pointer-events:none;
+}
+
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(360deg)}
+}
+
+/* ================= CONFETTI ================= */
+.confetti{
+  position:fixed;
+  top:-20px;
+  width:10px;
+  height:14px;
+  opacity:.9;
+  animation:confettiFall linear forwards;
+  z-index:9998;
+}
+
+
+@keyframes confettiFall{
+  to{
+    transform:translateY(110vh) rotate(1080deg);
+    opacity:0;
+  }
+}
+
+/* ================= THEME TOGGLE ================= */
+#themeToggle{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ffd700,#fff2a8);
+  backdrop-filter:blur(8px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:22px;
+  cursor:pointer;
+  z-index:999;
+}
+
+
+
+
+/* =========================================================
+   🔐 LOCKSCREEN PREMIUM (SATU-SATUNYA YANG DIUBAH)
+   ========================================================= */
+#lockScreen{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at top,#40345f,#120a25,#05010d);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:1.2s ease;
+  z-index:9999;
+}
+
+.particle{
+  position:absolute;
+  top:-10px;
+  width:5px;
+  height:5px;
+  background:radial-gradient(circle,#fff,#ffd98a);
+  border-radius:50%;
+  opacity:.85;
+  filter:blur(.6px);
+  animation:fall linear infinite;
+}
+
+.frame{
+  padding:6px;
+  border-radius:30px;
+  background:linear-gradient(270deg,#f8f85a,#6a5acd,#00c6ff,#2bee2f,#e92323);
+  background-size:600% 600%;
+  animation:borderMove 6s ease infinite;
+}
+
+@keyframes borderMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.card{
+  background:linear-gradient(180deg,#0e1a25,#05010d);
+  border-radius:26px;
+  padding:24px;
+  width:340px;
+  text-align:center;
+  animation:breathingLight 6s ease-in-out infinite;
+  position:relative;
+}
+
+@keyframes breathingLight{
+  0%,100%{box-shadow:0 0 22px rgba(255,217,138,.3)}
+  50%{box-shadow:0 0 60px rgba(255,217,138,.6)}
+}
+
+.photo-single{
+  width:220px;
+  height:260px;
+  margin:0 auto 26px;
+  border-radius:50% / 40%;
+  overflow:hidden;
+  box-shadow:0 0 35px rgba(255,217,138,.8),0 0 90px rgba(255,217,138,.45);
+}
+
+.photo-single img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+#lockScreen h1{
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  color:#ffd98a;
+}
+
+#lockScreen p{
+  font-size:14px;
+  letter-spacing:2px;
+  background: linear-gradient(45deg, #eae8e2, #ff69b4, #635ce1, #37de53, #ede579, #3bdada); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  margin-bottom:22px;
+  animation: aurora 4s ease infinite;
+  background-size: 600% 600%;
+}
+
+
+.circle-grid {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.circle {
+  background: rgba(255,255,255,0.08);
+  border: 4px solid #FFD700;
+  border-radius: 5px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffd700;
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+  animation: pulse 2s infinite alternate;
+}
+
+.circle .icon {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+
+.circle p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1em;
+  text-align: center;
+}
+.circle p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1em;
+  text-align: center;
+}
+.light .circle p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1em;
+  text-align: center;
+  color:#931482
+}
+
+@keyframes pulse {
+  from { box-shadow: 0 0 6px #5c5c1b; }
+  to { box-shadow: 0 0 25px #9fc554; }
+}
+
+.timeline { position: relative; padding: 50px 20px; }
+
+.scene {
+  margin: 40px 0;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: fadeScene 1.5s ease forwards;
+}
+
+.scene:nth-child(2) { animation-delay: 1s; }
+.scene:nth-child(3) { animation-delay: 2s; }
+.scene:nth-child(4) { animation-delay: 3s; }
+.scene:nth-child(5) { animation-delay: 4s; }
+
+.scene h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8em;
+  color: #dcc333;
+  margin-bottom: 10px;
+}
+.light .scene h3 {
+  color: #a99311;
+  
+}
+
+.scene p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+@keyframes fadeScene {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/*   */
+/* ===== WELCOME MINIMAL ELEGANT ===== */
+
+.welcome{
+  text-align:center;
+  padding:15px 25px;
+  color:#f5f7fb;
+  font-size:14px;
+   text-shadow: 0 0 10px rgba(250, 244, 244, 0.8);
+  line-height: 1.6;
+}
+.light .welcome{
+  text-align:center;
+  padding:15px 25px;
+  color:#5c0f4b;
+  font-size:14px;
+   text-shadow: 0 0 10px rgba(251, 243, 250, 0.974);
+  line-height: 1.6;
+}
+
+/* Kepada Yth */
+.welcome-to{
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#cfcfcf;
+  margin-top:30px;
+}
+.light .welcome-to{
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#7d7979;
+  margin-top:30px;
+}
+
+/* Nama Tamu */
+.guest-name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  color:#ffd700;
+  margin-top:6px;
+}
+.light .guest-name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  color:#ce227e;
+  margin-top:6px;
+}
+
+
+
+/* profile mempelai */
+/* ===== DARK LUXURY PROFILE ===== */
+.nama-mempelai {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6em;
+  color: #f7e7ce;
+   text-shadow: 1px 1px 2px #ffd700, 2px 2px 6px rgba(0,0,0,0.5), 0 0 10px rgba(255,215,0,0.6); /* glow emas */
+    margin: 0;
+}
+.light .nama-mempelai {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6em;
+  color: #efdfec;
+   text-shadow: 1px 1px 2px #0b0b065a, 2px 2px 6px rgba(0,0,0,0.5), 0 0 10px rgba(11, 11, 5, 0.972); /* glow emas */
+    margin: 0;
+}
+
+
+.page.groom {
+  background: rgba(173,216,230,0.08); /* biru lembut */
+  box-shadow: inset 0 0 40px rgba(16, 102, 131, 0.25),
+              0 0 25px rgba(255,182,193,0.3);
+}
+.light .page.groom {
+  background: rgba(173,216,230,0.08); /* biru lembut */
+  box-shadow: inset 0 0 40px rgba(6, 180, 238, 0.25),
+              0 0 25px rgb(44, 164, 164);
+}
+
+
+.page.groom::before { 
+  content: ""; position: absolute; 
+  top: 0; bottom: 0; left: 0; 
+  width: 20px; border-radius: 20px 0 0 20px; 
+  background: linear-gradient(to right, rgba(0,0,0,0.40), transparent); 
+  z-index: 2; /* pastikan di atas background */ }
+
+
+.storybook {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  position: relative;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+
+
+/* Halaman kiri & kanan */
+.page {
+  flex: 0 0 auto;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  min-height: 220px;
+  text-align: center;
+  box-shadow: inset 0 0 40px rgba(255,215,0,0.2),
+              0 0 25px rgba(255,215,0,0.3);
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  width: 100%; 
+  max-width: 200px; /* batasi lebar card di HP */ 
+  margin: 0 auto;
+}
+
+
+/* Efek lipatan buku */
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 20px;
+  background: linear-gradient(to right, rgba(0,0,0,0.2), transparent);
+}
+.groom::before { left: 0; border-radius: 20px 0 0 20px; 
+}
+.bride::before { right: 0; border-radius: 0 20px 20px 0; 
+}
+
+/* Frame foto */
+.photo-frame1 {
+  border: 5px solid gold;
+  border-radius: 50%;
+  padding: 5px;
+  display: inline-block;
+  box-shadow: 0 0 25px rgba(255,215,0,0.6);
+  position: relative;
+  width: 140px; 
+  height: 140px;
+  
+}
+.light .photo-frame1 {
+  border: 5px solid rgb(243, 124, 195);
+  border-radius: 50%;
+  padding: 5px;
+  display: inline-block;
+  box-shadow: 0 0 25px rgba(247, 61, 232, 0.846);
+  position: relative;
+  width: 140px; 
+  height: 140px;
+  backdrop-filter: blur(8px);
+}
+.photo-frame1 img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.page img { 
+  width: 100%; 
+  height: 100%; object-fit: cover; /* isi penuh, proporsi terjaga */ 
+  display: block; 
+}
+
+/* Divider tengah */
+.page-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2em;
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255,215,0,0.8);
+  margin-top: 0px;
+  
+}
+.light .page-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2em;
+  color: #27230a;
+  text-shadow: 0 0 15px rgba(255,215,0,0.8);
+  padding: 0 20px;
+}
+
+.page-content p {
+  font-size: 0.8em;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(186, 30, 30, 0.8);
+  line-height: 1.6;
+  
+}
+.light .page-content p {
+  font-size: 0.8em;
+  font-family: 'Playfair Display', serif;
+  color: #7e1352;
+  text-shadow: 0 0 10px rgba(62, 70, 20, 0.8);
+  line-height: 1.6;
+}
+
+.page-divider .ornament {
+  font-size: 1em;
+  animation: colorShift 4s infinite alternate;
+}
+@keyframes colorShift { 
+  0% { color: #ff69b4; } /* pink */ 
+  25% { color: #76660a; } /* emas */ 
+  50% { color: #2d8283; } /* turquoise */ 
+  75% { color: #45dc42; } /* ungu */ 
+  100% { color: #ff4500; } /* oranye */ }
+
+/* Animasi */
+@keyframes sparkle {
+  from { opacity: 0.6; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+/* susuanan acara */
+.agenda-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.agenda-list li {
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  color: #e0f7ff;
+  margin: 12px 0;
+  padding: 14px 18px;
+  border-left: 5px solid #00bfff;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #001a33, #003366, #001a33);
+  background-size: 400% 400%;
+  animation: waveFlow 8s ease infinite;
+  box-shadow: 0 0 25px rgba(0,191,255,0.8), inset 0 0 15px rgba(0,191,255,0.4);
+}
+
+/* Efek riak bergelombang */
+@keyframes waveFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Waktu acara bercahaya */
+.agenda-list li .time {
+  font-weight: bold;
+  color: #00eaff;
+  margin-right: 10px;
+  text-shadow: 0 0 15px rgba(0,191,255,1);
+}
+
+/* Bulatan glow di tiap item */
+.agenda-list li::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: #00bfff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,191,255,1);
+  animation: pulseBlue 2s infinite;
+}
+
+/* Animasi pulse bulatan */
+@keyframes pulseBlue {
+  0% { transform: scale(1) translateY(-50%); box-shadow: 0 0 10px rgba(0,191,255,0.6); }
+  50% { transform: scale(1.3) translateY(-50%); box-shadow: 0 0 25px rgba(0,191,255,1); }
+  100% { transform: scale(1) translateY(-50%); box-shadow: 0 0 10px rgba(0,191,255,0.6); }
+}
+
+/* ===== ICON TENGAH LOKASI ===== */
+
+#lokasi p {
+  position: relative;
+  padding-top: 45px; /* ruang untuk icon */
+}
+
+/* ICON MAP */
+#lokasi p::before {
+  content: "📍";              /* bisa diganti */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  opacity: 0.85;
+}
+
+
+
+/*  display */
+
+@media(max-width:600px){
+  .section { padding: 30px 15px; /* lebih rapat di HP */ }
+
+  .countdown{
+    gap:12px;
+  }
+
+  .neon{
+    padding:10px 12px;
+    min-width:75px;
+  }
+
+  .neon span{
+    font-size:1.2em;     /* ANGKA HP */
+  }
+
+  .neon small{
+    font-size:0.65em;    /* TEKS HP */
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- 🌙 TOGGLE -->
+<div id="themeToggle" onclick="toggleTheme()">🌙</div>
+
+<!-- 🔐 LOCKSCREEN -->
+<div id="lockScreen">
+  <div class="frame">
+    <div class="card">
+      <div class="photo-single">
+        <img src="image1.png">
+      </div>
+      <h1>Sophia & Ethan</h1>
+      <p>WEDDING INVITATION</p>
+      <button class="btn" onclick="openInvite()">💌 Buka Undangan</button>
+    </div>
+  </div>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="musik-romantis.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ================= ISI UNDANGAN ASLI (TIDAK DIUBAH) ================= -->
+
+<div class="section">
+  <div class="glass">
+    <h2 class="title">Wedding Invitation</h2>
+    <div class="photo-frame">
+      <img src="image1.png">
+    </div>
+    <h2 class="names">Sophia & Ethan</h2>
+    <div class="date">Sabtu, 25 Agustus 2024</div>
+    <div class="countdown" id="countdown">
+      <div class="neon"><span id="days">0</span><small>Hari</small></div> 
+      <div class="neon"><span id="hours">0</span><small>Jam</small></div> 
+      <div class="neon"><span id="mins">0</span><small>Menit</small></div>
+    </div>
+    <a href="#detail" class="btn">Lihat Detail</a>
+  </div>
+</div>
+
+
+<section class="section">
+  <div class="glass">
+     <h2 >our invitation</h2>
+    <!-- Kata Sambutan -->
+    <div class="welcome">
+      <p>
+        Dengan penuh rasa syukur dan kebahagiaan, kami mengundang Anda
+        untuk menyusuri perjalanan cinta kami.
+        Semoga setiap cerita membawa senyum dan kehangatan di hati Anda.
+      </p>
+      <p class="welcome-to">Kepada Yth.</p>
+      <h3 class="guest-name">Bapak / Ibu / Saudara/i</h3>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="glass">
+    <h2>Profile Mempelai</h2>
+    <div class="storybook">
+
+      <!-- Halaman kiri: Groom -->
+      <div class="page groom">
+        <div class="photo-frame1">
+          <img src="image1.png" alt="Pengantin Pria">
+        </div>
+        <div class="page-content">
+          <h1 class="nama-mempelai">dw</h1>
+          <p>Putra ke-2 dari Bapak A & Ibu B</p>
+        </div>
+      </div>
+
+      <!-- Tengah: Ornamen / Kutipan -->
+      <div class="page-divider">
+        <div class="ornament">✦</div>
+       
+        <div class="ornament">✦</div>
+      </div>
+
+      <!-- Halaman kanan: Bride -->
+      <div class="page groom">
+        <div class="photo-frame1">
+          <img src="image1.png" alt="Pengantin Wanita">
+        </div>
+        <div class="page-content">
+          <h1 class="nama-mempelai">mr</h1>
+          <p>Putri dari Bapak C & Ibu D</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Section Quotes / Doa Pernikahan -->
+<section class="section">
+  <div class="glass">
+    <h2>Quotes & Doa Pernikahan</h2>
+    
+    <div class="quote-card">
+      <p>
+        "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang." 
+        <br>
+        <br>(QS. Ar-Rum: 21)
+      </p>
+    </div>
+    
+  </div>
+</section>
+
+<section class="section">
+  <div class="glass">
+    <h2>Our Celebration</h2>
+    <div class="storybook">
+
+      <div class="page groom">
+        <div class="page-content">
+          <h1 class="nama-mempelai">Event Highlight</h1>
+          <ul class="agenda-list">
+            <ul class="agenda-list">
+  
+  <li><span class="time">08.30</span> Kedatangan tamu & penyambutan</li>
+  <li><span class="time">09.00</span> Prosesi Akad Nikah</li>
+  <li><span class="time">10.00</span> Doa bersama & ucapan selamat</li>
+  <li><span class="time">10.30</span> Sesi foto bersama</li>
+  <li><span class="time">12.00</span> Resepsi & makan siang</li>
+  <li><span class="time">13.00</span> Penutup acara</li>
+</ul>
+
+</ul>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    
+
+<div class="section">
+  <div class="glass">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <img src="image1.png" alt="Foto 1">
+      <img src="image1.png" alt="Foto 2">
+      <img src="image1.png" alt="Foto 3">
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Preview">
+</div>
+
+
+<div class="section">
+  <div class="glass timeline">
+    <h2>Our Love Story</h2>
+    <div class="scene"> <h3>2018</h3> <p>Pertemuan pertama — sebuah momen sederhana yang mengubah segalanya.</p> 
+    </div> <div class="scene"> <h3>2019</h3> <p>Mulai bersama — dua hati mulai berjalan seiring, penuh suka dan duka.</p> 
+    </div> <div class="scene"> <h3>2023</h3> <p>Lamaran — janji manis di hadapan keluarga, awal komitmen seumur hidup.</p> 
+    </div> <div class="scene"> <h3>2024</h3> <p>Pernikahan — puncak perjalanan cinta, hari penuh doa dan kebahagiaan.</p> </div>
+  </div>
+</div>
+
+<!-- Section Lokasi -->
+<section class="section" id="lokasi">
+  <div class="glass">
+    <div class="lokasi-content">
+      <h2>Lokasi</h2>
+      <p>Gedung Serbaguna<br>Jl. Merdeka No. 10, Palembang</p>
+      <a href="https://maps.google.com?q=Gedung+Serbaguna+Palembang" class="btn">Lihat di Maps</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="rekening">
+  <div class="glass rekening-card">
+    <h2>Wedding Gift</h2>
+    <div class="rekening-body">
+      <p class="date">💳 Bank BCA</p>
+      <p class="rekening-number">1234 5678 9012</p>
+      <p class="holder">a.n. Nama Pengantin</p>
+      <p class="date">💳 Bank BRI</p>
+      <p class="rekening-number">1234 5678 9012</p>
+      <p class="holder">a.n. Nama Pengantin</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section Terima Kasih -->
+<section class="section">
+  <div class="glass">
+    <h2>Terima Kasih</h2>
+    <p>Terima kasih atas doa dan kehadiran Anda. Kehormatan dan kebahagiaan bagi kami dapat berbagi momen istimewa ini bersama Anda.</p>
+  </div>
+</section>
+
+
+<script>
+  /*galery */
+
+  const galleryImages = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+
+
+/* OPEN INVITE */
+function openInvite(){
+  const lock=document.getElementById("lockScreen");
+  lock.style.opacity="0";
+  lock.style.transform="scale(1.1)";
+  document.getElementById("bgMusic").play();
+  launchConfetti();
+  setTimeout(()=>lock.style.display="none",1200);
+}
+
+/* FLOWER */
+for(let i=0;i<20;i++){
+  const f=document.createElement("div");
+  f.className="flower";
+  f.innerText="🌸";
+  f.style.left=Math.random()*100+"vw";
+  f.style.animationDuration=(6+Math.random()*5)+"s";
+  f.style.fontSize=(18+Math.random()*18)+"px";
+  document.body.appendChild(f);
+}
+
+/* PARTICLE LOCKSCREEN */
+for(let i=0;i<45;i++){
+  const p=document.createElement("div");
+  p.className="particle";
+  p.style.left=Math.random()*100+"%";
+  p.style.animationDuration=(6+Math.random()*6)+"s";
+  document.getElementById("lockScreen").appendChild(p);
+}
+
+/* CONFETTI */
+function launchConfetti(){
+  for(let i=0;i<120;i++){
+    const c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*100+"vw";
+    c.style.animationDuration=(2+Math.random()*2)+"s";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),4500);
+  }
+}
+
+/* COUNTDOWN */
+document.addEventListener("DOMContentLoaded", function() {
+  const target = new Date("2026-02-25T16:00:00").getTime();
+
+  const daysEl = document.getElementById("days");
+  const hoursEl = document.getElementById("hours");
+  const minsEl = document.getElementById("mins");
+  const cd = document.getElementById("countdown");
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const d = target - now;
+
+    if (d <= 0) {
+      cd.innerHTML = `
+        <div class="glass-box"><span>✨</span><small>Hari H</small></div>
+        <p style="color:#fff; font-weight:bold; margin-top:10px;">
+          Hari yang dinanti telah tiba 💖
+        </p>
+      `;
+      return;
+    }
+
+    const days = Math.floor(d / (1000*60*60*24));
+    const hours = Math.floor((d / (1000*60*60)) % 24);
+    const mins = Math.floor((d / (1000*60)) % 60);
+
+    daysEl.innerText = days;
+    hoursEl.innerText = hours;
+    minsEl.innerText = mins;
+  }, 1000);
+});
+
+
+
+function toggleTheme() {
+  const body = document.body;
+  const toggleBtn = document.getElementById("themeToggle");
+
+  // toggle class "light"
+  body.classList.toggle("light");
+
+  // ganti ikon sesuai tema
+  if (body.classList.contains("light")) {
+    toggleBtn.textContent = "🌙"; // mode light → tampilkan bulan sabit
+  } else {
+    toggleBtn.textContent = "☀️"; // mode dark → tampilkan matahari
+  }
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
